@@ -3,7 +3,7 @@
 base_path=/root/bk-base/
 repo_path=/opt/tools/apache-maven-3.8.4/repo
 
-result_package_path=/root/target/jobnavi
+result_package_path=/root/bk-base-docker/jobnavi
 
 docker run --rm --name jobnavi -e WORKSPACE="/bkdata" -e RELEASE_ENV="ee" -e BuildNo="137"  -v $base_path:/bkdata/code -v $result_package_path:/bkdata/code/result_package -v $repo_path:/root/.m2/repository -itd bk-base-common:v1 /bin/bash
 
