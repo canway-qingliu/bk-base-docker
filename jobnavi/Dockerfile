@@ -46,6 +46,8 @@ RUN set -ex \
 ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8
 
+RUN mkdir -p $BASE_DIR/bkee/jobnavi/jobnavischeduler
+
 COPY bkdata/jobnavischeduler $BASE_DIR/bkee/jobnavi/jobnavischeduler
 RUN mkdir -p $BASE_DIR/bkee/logs/jobnavi/jobnavi-scheduler
 RUN adduser dataflow
