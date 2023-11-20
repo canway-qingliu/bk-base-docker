@@ -1,9 +1,9 @@
 # 1.容器启动
 
-base_path=/Users/liuqing/IdeaProjects/release/bk-base
-repo_path=/Users/liuqing/tools/apache-maven-3.8.4/repo
+base_path=/root/bk-base/src
+repo_path=/opt/tools/apache-maven-3.8.4/repo
 
-result_package_path=/Users/liuqing/opt/docker/bk-base-docker/jobnavi
+result_package_path=/root/target/jobnavi
 
 docker run --rm --name jobnavi -e WORKSPACE="/bkdata" -e RELEASE_ENV="ee" -e BuildNo="137"  -v $base_path:/bkdata/code -v $result_package_path:/bkdata/code/result_package -v $repo_path:/root/.m2/repository -itd bk-base-common:v1 /bin/bash
 
