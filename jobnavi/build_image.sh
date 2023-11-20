@@ -49,7 +49,7 @@ docker_version=${VERSION}-${BUILD_NO}
 echo "docker tag 版本号 ${docker_version}"
 docker tag "bkbase-${SUBMODULE}:${VERSION}-${BUILD_NO}" $bkbase_docker_repository_domain/bkbase/bkbase-docker/bkbase-${SUBMODULE}:$docker_version
 
-docker push $bkbase_docker_repository_domain/bkbase/bkbase-docker/bkbase-${SUBMODULE}api:$docker_version
+docker push $bkbase_docker_repository_domain/bkbase/bkbase-docker/bkbase-${SUBMODULE}:$docker_version
 
 # 清理中间产物
 # rm -rf ./bkdata
