@@ -1,6 +1,6 @@
 # 1.容器启动
 
-base_path=/root/bk-base/src
+base_path=/root/bk-base/
 repo_path=/opt/tools/apache-maven-3.8.4/repo
 
 result_package_path=/root/target/jobnavi
