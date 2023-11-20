@@ -37,9 +37,10 @@ RUN yum -y update \
 ENV JAVA_HOME $WORK_DIR/jdk
 ENV PATH $JAVA_HOME/bin:$PATH
 WORKDIR $JAVA_HOME
+
+COPY konajdk.tar.gz ./
 RUN set -ex \
-    && wget -O konajdk.tar.gz "https://mirrors.tencent.com/repository/generic/konajdk/8/0/7/linux-x86_64/b1/TencentKona8.0.7.b1-internal_jdk_linux-x86_64_8u302.tar.gz" \
-    && tar -xvzf konajdk.tar.gz -C $JAVA_HOME --strip-components 1 \
+     tar -xvzf konajdk.tar.gz -C $JAVA_HOME --strip-components 1 \
     && rm konajdk.tar.gz
 # 设置字符编码
 ENV LC_ALL=en_US.UTF-8 \

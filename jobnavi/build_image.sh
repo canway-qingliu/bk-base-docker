@@ -1,5 +1,5 @@
 # 执行打包脚本
-sh package.sh
+# sh package.sh
 
 # 生成流水号
 base_version="1.0."
