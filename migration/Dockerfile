@@ -24,7 +24,7 @@ FROM centos:7
 
 WORKDIR /data/bkbase
 
-RUN yum update -y && yum install wget
+RUN yum update -y && yum -y install wget
 
 RUN wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm && yum -y install mysql57-community-release-el7-3.noarch.rpm \
      yum -y install mysql-community-server

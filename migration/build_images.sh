@@ -1,3 +1,3 @@
 
-
-cp /root/bk-base/src/migration ./
+rm -rf ./migration
+cp -r  /root/bk-base/src/migration ./
