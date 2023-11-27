@@ -24,10 +24,10 @@ FROM centos:7
 
 WORKDIR /data/bkbase
 
-RUN yum update -y && yum -y install wget
+RUN yum update -y && yum -y install http://repo.mysql.com//mysql80-community-release-el7-11.noarch.rpm \
+    &&  yum -y install mysql
 
-RUN wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm && yum -y install mysql57-community-release-el7-3.noarch.rpm \
-     yum -y install mysql-community-server
+
 
 RUN yum install -y  python3 lrzsz
 
@@ -39,3 +39,4 @@ RUN pip3 install -r /data/bkbase/migration/requirements.txt
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US \
     LC_ALL=en_US.UTF-8
+
